@@ -17,12 +17,12 @@ const RichTextEditor: React.FC = () => {
       },
       autofocus: true,
       data: DEFAULT_INITIAL_DATA,
-      onChange: async () => {
-        if (ejInstance.current) {
-          const content = await ejInstance.current.saver.save();
-          console.log(content);
-        }
-      },
+      // onChange: async () => {
+      //   if (ejInstance.current) {
+      //     const content = await ejInstance.current.saver.save();
+      //     console.log(content);
+      //   }
+      // },
       tools: EditorTools,
     });
   };
@@ -40,7 +40,32 @@ const RichTextEditor: React.FC = () => {
     };
   }, []);
 
-  return <div id="editorjs"></div>;
+  const saveData = async () => {
+    if (ejInstance.current) {
+      const content = await ejInstance.current.saver.save();
+      console.log(content);
+    }
+  };
+
+  return (
+    <div>
+      <div id="editorjs"></div>
+      <button
+        style={{
+          padding: "10px",
+          margin: "10px",
+          backgroundColor: "blue",
+          color: "white",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
+        onClick={saveData}
+      >
+        Save Data
+      </button>
+    </div>
+  );
 };
 
 export default RichTextEditor;
