@@ -48,12 +48,18 @@ const RichTextEditor: React.FC = () => {
   };
 
   return (
-    <div>
+    <div style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+    }}>
       <div id="editorjs"></div>
       <button
         style={{
           padding: "10px",
           margin: "10px",
+          width: "100px",
           backgroundColor: "blue",
           color: "white",
           border: "none",

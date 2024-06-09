@@ -40,7 +40,7 @@ const EditorTools = {
   inlineCode: InlineCode,
   link: Link,
   marker: Marker,
-  raw: Raw,
+  // raw: Raw,
   simpleImage: SimpleImage,
   table: Table,
   warning: Warning,
