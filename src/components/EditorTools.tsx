@@ -8,7 +8,7 @@ import Delimiter from "@editorjs/delimiter";
 import Embed from "@editorjs/embed";
 import Link from "@editorjs/link";
 import Marker from "@editorjs/marker";
-import Raw from "@editorjs/raw";
+// import Raw from "@editorjs/raw";
 import SimpleImage from "@editorjs/simple-image";
 import Table from "@editorjs/table";
 import Warning from "@editorjs/warning";
